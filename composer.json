@@ -1,8 +1,8 @@
 {
   "name": "microparts/errors-php",
-  "description": "PHP Error handling.",
+  "description": "Is a complex solution to handling exceptions for any web application.",
   "type": "library",
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "authors": [
     {
       "name": "roquie",
