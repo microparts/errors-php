@@ -2,6 +2,7 @@ Errors PHP package
 ==================
 
 [![CircleCI](https://circleci.com/gh/microparts/errors-php.svg?style=svg)](https://circleci.com/gh/microparts/errors-php)
+[![codecov](https://codecov.io/gh/microparts/errors-php/branch/master/graph/badge.svg)](https://codecov.io/gh/microparts/errors-php)
 
 Is a complex solution to handling exceptions for any web application.
 Compatible with [PSR-3](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md) (logger) 
