@@ -1,0 +1,34 @@
+{
+  "name": "microparts/errors-php",
+  "description": "PHP Error handling.",
+  "type": "library",
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "roquie",
+      "email": "roquie0@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-json": "*",
+    "psr/http-message": "^1.0",
+    "psr/log": "^1.1",
+    "zendframework/zend-diactoros": "^2.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8",
+    "symfony/var-dumper": "^4.2",
+    "microparts/logs-php": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Microparts\\Errors\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Microparts\\Errors\\Tests\\": "tests"
+    }
+  }
+}
