@@ -82,10 +82,33 @@ $error->addDatabaseException(RedisException::class);
 // If you want use my pretty logger, just run command: 
 // composer require microparts/logs-php
 $error->addNotifier(new LoggerNotify(Logger::new()));
-$error->addNotifier(new SentryNotify($dsn)); // coming soon
+$error->addNotifier(new SentryNotify(['dsn' => $dsn]));
 ```
 
 That all. Use with ❤.
+
+## Sentry & Both notify channels
+
+Sentry integration available. Install sentry sdk through composer: 
+
+```bash
+composer require sentry/sdk
+```
+
+...and then register new notifier:
+```php
+use Microparts\Errors\Error;
+use Microparts\Errors\Notify\LoggerNotify;
+use Microparts\Errors\Notify\SentryNotify;
+use Microparts\Logger\Logger;
+
+$error = Error::new();
+$error->addNotifier(new LoggerNotify(Logger::new()));
+$error->addNotifier(new SentryNotify(['dsn' => $dsn]));
+````
+
+Two notifies will be works together and send notifications to both channels.
+Now you should be capture exceptions in the try/catch block.
 
 ## Tests
 

@@ -7,6 +7,7 @@ use Microparts\Errors\Notify\LoggerNotify;
 use Microparts\Errors\Notify\NotifyInterface;
 use Microparts\Errors\Notify\NotifyPool;
 use Microparts\Errors\Notify\NullNotify;
+use Microparts\Errors\Notify\SentryNotify;
 use Microparts\Errors\Tests\TestCase;
 use Psr\Log\LoggerInterface;
 use Throwable;
@@ -60,5 +61,16 @@ class NotifyTest extends TestCase
         $pool->subscribe($notify);
 
         $pool->notify(new Exception(), 704);
+    }
+
+    public function testSentryNotifier()
+    {
+        try {
+            $notifier = new SentryNotify([]);
+            $notifier->notify(new Exception(), 704);
+            $this->assertTrue(true);
+        } catch (Throwable $e) {
+            $this->assertTrue(false);
+        }
     }
 }
