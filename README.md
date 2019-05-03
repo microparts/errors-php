@@ -87,7 +87,7 @@ $error->addNotifier(new SentryNotify(['dsn' => $dsn]));
 
 That all. Use with ❤.
 
-## Sentry & Both notify channels
+## Sentry & Notify both channels
 
 Sentry integration available. Install sentry sdk through composer: 
 
