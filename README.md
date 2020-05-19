@@ -1,3 +1,6 @@
+This package moved to https://github.com/spacetab-io/errors-php
+-----------------------------
+
 Errors PHP package
 ==================
 
